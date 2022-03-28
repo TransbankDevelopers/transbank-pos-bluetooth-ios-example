@@ -64,8 +64,7 @@ class ViewController: UIViewController,ICPclServiceDelegate {
     func startPclService(terminal:ICTerminal, sslParameters: ICSSLParameters) -> pclServiceState?
     {
         pclService?.delegate=self
-        pclService?.start(with: terminal, andSecurity: sslParameters)
-        return pclService?.getState()
+        return pclService?.start(with: terminal, andSecurity: sslParameters)
     }
     
     func SelecTerminalAndStartPCLDemo()
