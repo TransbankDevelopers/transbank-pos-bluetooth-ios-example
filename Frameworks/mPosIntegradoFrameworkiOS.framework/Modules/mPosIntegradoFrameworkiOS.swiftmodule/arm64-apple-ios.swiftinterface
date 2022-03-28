@@ -1,0 +1,21 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target arm64-apple-ios15.2 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name mPosIntegradoFrameworkiOS
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import iSMP
+@_exported import mPosIntegradoFrameworkiOS
+@objc @_inheritsConvenienceInitializers public class mPosIntegrado : ObjectiveC.NSObject, iSMP.ICPclServiceDelegate, iSMP.ICISMPDeviceDelegate, iSMP.ICAdministrationStandAloneDelegate {
+  open var onFinishTransaction: ((_ result: Swift.String) -> ())?
+  @objc override dynamic public init()
+  public func getDevices() -> [iSMP.ICTerminal]
+  public func setPclServiceforUtils(service: iSMP.ICPclService)
+  public func stopPCLService()
+  public func getFullSerialNumber()
+  public func getBatteryLevel()
+  public func startTransaction(payload: Swift.String) -> Swift.Int
+  @objc public func transactionDidEnd(withTimeoutFlag replyReceived: Swift.Bool, reply transactionReply: iSMP.ICTransactionReplyObject!)
+  @objc deinit
+}

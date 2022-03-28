@@ -1,0 +1,17 @@
+framework module iSMP {
+  umbrella header "iSMP.h"
+
+  export *
+
+  module revision {
+      header "revision.h"
+      export *
+  }
+
+  module CommunicationPeripherals {
+    header "ICCommunicationPeripherals.h"
+    export *
+  }
+
+  module * { export * }
+}

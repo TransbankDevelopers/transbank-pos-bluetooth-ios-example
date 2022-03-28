@@ -1,0 +1,11 @@
+framework module mPosIntegradoFrameworkiOS {
+  umbrella header "mPosIntegradoFrameworkiOS.h"
+
+  export *
+  module * { export * }
+}
+
+module mPosIntegradoFrameworkiOS.Swift {
+    header "mPosIntegradoFrameworkiOS-Swift.h"
+    requires objc
+}
